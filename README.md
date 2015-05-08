@@ -12,6 +12,7 @@ This project contains the essential goodies:
 - jquery (it's bootstrap navbar's fault)
 - gulp
 - node
+
 Note: If you need to add more to the 'vendor' folder, make sure to specify the path in the 'gulpfile.js' file. Then do a rebuild.
 
 
@@ -26,6 +27,7 @@ Step 3: open 'localhost:3000' in your browser
 
 ##### Production
 Production will be looking at the 'build' folder.
+
 Side Note: If you are hosting this in a subfolder on production, make sure to update the base url in 'views/preprocessed/layout.ejs'.
 
 Step 1: run 'gulp prod' to build everything
