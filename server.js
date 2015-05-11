@@ -8,7 +8,7 @@ var server = app.listen(port, function() {
     console.log('Listening on port %d', server.address().port);
 });
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'devaelopment';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.use(bodyParser.urlencoded({extended: true}));
 
