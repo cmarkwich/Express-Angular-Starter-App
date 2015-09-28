@@ -11,6 +11,8 @@ var server = app.listen(port, function() {
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json({limit: '5mb'}));
+app.use(bodyParser.raw({limit: '5mb'}));
 
 if (process.env.NODE_ENV == 'development') {
 	app.use('build/templates', express.static(__dirname + '/assets/templates'));
