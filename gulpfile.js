@@ -33,6 +33,10 @@ var paths = {
   built: ['build/', 'views/layout.ejs']
 };
 
+function swallowError (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
 
 // The default task (call gulp, builds whole project)
 gulp.task('clean', function() {
@@ -91,6 +95,7 @@ gulp.task('prod', ['clean', 'process_prod', 'scripts', 'sass', 'images', 'fonts'
 gulp.task('devsass', function () {
     return gulp.src(paths.sass)
         .pipe(sass())
+        .on('error', swallowError)
         .pipe(concat('main.min.css'))
         .pipe(minifyCSS({keepBreaks:false}))
         .pipe(gulp.dest('build/css'));
@@ -99,6 +104,7 @@ gulp.task('devsass', function () {
 gulp.task('devscripts', function() {
     return gulp.src(paths.scripts)
       .pipe(gulpif(/[.]coffee$/, coffee()))
+      .on('error', swallowError)
       .pipe(concat('main.min.js'))
       .pipe(gulp.dest('build/js'));
 });
