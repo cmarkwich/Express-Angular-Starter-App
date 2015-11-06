@@ -84,7 +84,7 @@ gulp.task('templates', ['clean'], function() {
     .pipe(gulp.dest('build/templates'));
 });
 
-gulp.task('dev', ['clean', 'process_dev', 'scripts', 'sass', 'images', 'fonts', 'templates']);
+gulp.task('dev', ['clean', 'process_dev', 'devscripts', 'sass', 'images', 'fonts', 'templates']);
 gulp.task('prod', ['clean', 'process_prod', 'scripts', 'sass', 'images', 'fonts', 'templates']);
 
 // The dev task (call gulp server, builds scss and js files quickly while generating localhost)
