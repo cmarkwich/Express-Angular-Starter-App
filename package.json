@@ -3,7 +3,10 @@
   "description": "Simple express angular app featuring many goodies",
   "version": "0.0.1",
   "private": true,
-"dependencies": {
+  "scripts": {
+    "start": "gulp prod"
+  },
+  "dependencies": {
     "express": "4.9.5",
     "ejs": "1.0.0",
     "body-parser": "1.9.0",
