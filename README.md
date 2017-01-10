@@ -26,6 +26,6 @@ Step 2: open 'localhost:3000' in your browser
 step 3: begin coding
 
 ##### Production
-Side Note: If you are hosting this in a subfolder on production, make sure to update the base url in 'views/preprocessed/layout.ejs'.
+Side Note: If you are hosting this in a subfolder on production, make sure to update the base url in 'views/preprocessed/layout.ejs'. Example: base href="/subdomain/"
 
 Step 1: run 'npm start'
